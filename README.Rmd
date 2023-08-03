@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # libminer2
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/MonkmanMH/libminer2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MonkmanMH/libminer2/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of libminer2 is to provide a summary of a user's R libraries. It's a toy package developed in a workshop taught by Andy Teucher on 2023-08-03.

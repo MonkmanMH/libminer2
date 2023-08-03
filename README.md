@@ -4,6 +4,8 @@
 # libminer2
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/MonkmanMH/libminer2/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MonkmanMH/libminer2/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of libminer2 is to provide a summary of a user’s R libraries.
@@ -29,10 +31,10 @@ library(libminer2)
 ## basic example code
 
 lib_summary()
-#>                                                               library
-#> 1                                  C:/Program Files/R/R-4.3.1/library
-#> 2                      C:/Users/marti/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/marti/AppData/Local/Temp/RtmpgncejI/temp_libpath4ae4691ad0
+#>                                                                 library
+#> 1                                    C:/Program Files/R/R-4.3.1/library
+#> 2                        C:/Users/marti/AppData/Local/R/win-library/4.3
+#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc4d09749a
 #>   n_packages
 #> 1         30
 #> 2        200
@@ -41,14 +43,14 @@ lib_summary()
 # you can also ask it to calculate the sizes 
 
 lib_summary(sizes = TRUE)
-#>                                                               library
-#> 1                                  C:/Program Files/R/R-4.3.1/library
-#> 2                      C:/Users/marti/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/marti/AppData/Local/Temp/RtmpgncejI/temp_libpath4ae4691ad0
+#>                                                                 library
+#> 1                                    C:/Program Files/R/R-4.3.1/library
+#> 2                        C:/Users/marti/AppData/Local/R/win-library/4.3
+#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc4d09749a
 #>   n_packages  lib_size
 #> 1         30  68858812
 #> 2        200 614077127
-#> 3          1     17125
+#> 3          1     13384
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`?
