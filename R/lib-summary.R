@@ -1,6 +1,8 @@
 
 #' R library summary
 #'
+#' @param sizes A logical indicating whether or not to add the space size (in bytes)
+#'
 #' @return A data.frame containing the count of packages in each of your libraries.
 #' @export
 #'
@@ -8,6 +10,7 @@
 #' \dontrun{
 #' lib_summary()
 #' }
+#' lib_summary(sizes = TRUE)
 lib_summary <- function(sizes = FALSE) {
   pkgs <- utils::installed.packages()
   pkg_tbl <- table(pkgs[, "LibPath"])

@@ -6,6 +6,9 @@
 \usage{
 lib_summary(sizes = FALSE)
 }
+\arguments{
+\item{sizes}{A logical indicating whether or not to add the space size (in bytes)}
+}
 \value{
 A data.frame containing the count of packages in each of your libraries.
 }
@@ -16,4 +19,5 @@ R library summary
 \dontrun{
 lib_summary()
 }
+lib_summary(sizes = TRUE)
 }
