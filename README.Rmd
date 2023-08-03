@@ -21,6 +21,9 @@ knitr::opts_chunk$set(
 
 The goal of libminer2 is to provide a summary of a user's R libraries. It's a toy package developed in a workshop taught by Andy Teucher on 2023-08-03.
 
+Course ethernet: https://etherpad.wikimedia.org/p/2023-08-03-r-pkg-dev
+
+
 ## Installation
 
 You can install the development version of libminer2 from [GitHub](https://github.com/) with:

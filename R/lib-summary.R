@@ -1,30 +1,40 @@
-
-#' R library summary
+#' R Library Summary
 #'
-#' @param sizes A logical indicating whether or not to add the space size (in bytes)
+#' Provides a brief summary of the package
+#' libraries on your machine
 #'
-#' @return A data.frame containing the count of packages in each of your libraries.
+#' @param sizes a logical indicating whether or not to calculate
+#'    sizes
+#'
+#' @return A data.frame containing the count
+#'    of packages in each of your libraries.
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' lib_summary()
-#' }
 #' lib_summary(sizes = TRUE)
 lib_summary <- function(sizes = FALSE) {
   pkgs <- utils::installed.packages()
   pkg_tbl <- table(pkgs[, "LibPath"])
   pkg_df <- as.data.frame(pkg_tbl, stringsAsFactors = FALSE)
   names(pkg_df) <- c("library", "n_packages")
-  # add package sizes
-  if (sizes){
-    pkg_df$lib_size <- vapply(
-      pkg_df$library,
-      function(x){
-        sum(fs::file_size(fs::dir_ls(x, recurse = TRUE)))
-      },
-      FUN.VALUE = double(1)
-    )
+
+  if (sizes) {
+    pkg_df <- calculate_sizes(pkg_df)
   }
   pkg_df
+}
+
+#' calculate sizes
+#'
+#' @param df a data.frame
+#'
+#' @return df with a lib_size column
+#' @noRd
+calculate_sizes <- function(df) {
+  df$lib_size <- map_dbl(
+    df$library,
+    ~ sum(fs::file_size(fs::dir_ls(.x, recurse = TRUE)))
+  )
+  df
 }

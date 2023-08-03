@@ -12,6 +12,8 @@ The goal of libminer2 is to provide a summary of a user’s R libraries.
 It’s a toy package developed in a workshop taught by Andy Teucher on
 2023-08-03.
 
+Course ethernet: <https://etherpad.wikimedia.org/p/2023-08-03-r-pkg-dev>
+
 ## Installation
 
 You can install the development version of libminer2 from
@@ -34,7 +36,7 @@ lib_summary()
 #>                                                                 library
 #> 1                                    C:/Program Files/R/R-4.3.1/library
 #> 2                        C:/Users/marti/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc4d09749a
+#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc5c8366e6
 #>   n_packages
 #> 1         30
 #> 2        200
@@ -46,11 +48,11 @@ lib_summary(sizes = TRUE)
 #>                                                                 library
 #> 1                                    C:/Program Files/R/R-4.3.1/library
 #> 2                        C:/Users/marti/AppData/Local/R/win-library/4.3
-#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc4d09749a
+#> 3 C:/Users/marti/AppData/Local/Temp/Rtmp48L5YN/temp_libpath12cc5c8366e6
 #>   n_packages  lib_size
 #> 1         30  68858812
 #> 2        200 614077127
-#> 3          1     13384
+#> 3          1     13584
 ```
 
 What is special about using `README.Rmd` instead of just `README.md`?
