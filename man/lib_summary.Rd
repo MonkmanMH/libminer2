@@ -4,7 +4,7 @@
 \alias{lib_summary}
 \title{R library summary}
 \usage{
-lib_summary()
+lib_summary(sizes = FALSE)
 }
 \value{
 A data.frame containing the count of packages in each of your libraries.

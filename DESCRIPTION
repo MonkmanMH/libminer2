@@ -17,3 +17,5 @@ BugReports: https://github.com/MonkmanMH/libminer2/issues
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    fs
