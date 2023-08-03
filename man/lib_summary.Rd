@@ -13,5 +13,7 @@ A data.frame containing the count of packages in each of your libraries.
 R library summary
 }
 \examples{
+\dontrun{
 lib_summary()
+}
 }
